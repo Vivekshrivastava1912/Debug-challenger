@@ -141,7 +141,7 @@ Always follow this instruction 100% strictly.`
           onClick={generateAnswer}
           className="text-bold bg-gray-700 rounded-2xl p-2"
         >
-          APICALL
+         Generate
         </button>
       </div>
 
