@@ -1,0 +1,7 @@
+/* Full screen gradient background */
+@import "tailwindcss";
+
+body{
+  background-color: black;
+  color: aliceblue;
+}
