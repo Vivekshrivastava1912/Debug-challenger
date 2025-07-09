@@ -150,7 +150,9 @@ Always follow this instruction 100% strictly.`
    <Editor   height="100%"
         language={language}
         theme="vs-dark"
+        
         value={answer} 
+
          options={{ readOnly: true, minimap: { enabled: false } }}
         onMount={(editor) => {
           const container = editor.getContainerDomNode();

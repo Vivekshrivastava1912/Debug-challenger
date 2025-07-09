@@ -7,7 +7,7 @@ const App = () => {
   const [language, setLanguage] = useState("cpp"); 
   const [topic, setTopic] = useState("array");
   const [level, setLevel] = useState("easy");
-  const [answer, setAnswer] = useState("// Click APICALL to generate buggy code...");
+  const [answer, setAnswer] = useState("// 🐞 Choose topic, language & level → Hit Generate to generate! 🛠️ ");
 
   return (
     <div className="flex bg-gray-400 h-screen">
