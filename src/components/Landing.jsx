@@ -6,7 +6,11 @@ import React from 'react'
 const Landing = () => {
   return (
     <div className="flex overflow-hidden h-screen">
-     
+     <div className="w-1/3 m-7 ml-1 bg-black  rounded-2xl  ">
+       <Spline className='h-full rounded-2xl bg'  scene="https://prod.spline.design/LJ4xIH3ZVAwJ7toB/scene.splinecode" />
+       
+        
+      </div>
       <div className="w-300 m-7 ml-1 bg-black shadow-[1PX_0_3px_#ffffff] rounded-2xl ">
        <div className="min-h-screen  text-white flex items-center justify-center px-6 py-12">
       <div className="max-w-2xl text-center">
@@ -52,11 +56,7 @@ const Landing = () => {
       
     </div>
       </div> 
-       <div className="w-1/3 m-7 ml-1 bg-black  rounded-2xl  ">
-       <Spline className='h-full rounded-2xl bg'  scene="https://prod.spline.design/LJ4xIH3ZVAwJ7toB/scene.splinecode" />
-       
-        
-      </div></div>
+       </div>
   )
 }
 
