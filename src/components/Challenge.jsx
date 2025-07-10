@@ -14,8 +14,8 @@ const Challenge = () => {
 
 
   
-    <div className="flex bg-gray-400 h-screen">
-      <div className="w-1/2 p-4 m-2 bg-gray-800 rounded-2xl overflow-auto">
+    <div className="flex bg-gray-400 h-screen overflow-hidden">
+      <div className="w-1/2 p-4 m-2 bg-gray-800 rounded-2xl overflow-hidden">
         <Apique
           language={language}
           setLanguage={setLanguage}
@@ -28,7 +28,7 @@ const Challenge = () => {
           setUserCode={setUserCode}
         />
       </div>
-      <div className="w-1/2 p-3 m-2 bg-gray-800 rounded-2xl overflow-auto">
+      <div className="w-1/2 p-3 m-2 bg-gray-800 rounded-2xl overflow-hidden">
         <Editor language={language} code={userCode} />
       </div>
     </div></>
