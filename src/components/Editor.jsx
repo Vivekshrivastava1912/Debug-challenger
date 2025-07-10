@@ -20,7 +20,7 @@ const Editor = ({ language, code }) => {
 
       <div className='h-25 rounded-2xl
       bg-gray-500 m-2 mt-1 p-5 '> I AM OUTPUT </div>
-      <div className='h-20 rounded-2xl
+      <div className='h-18 rounded-2xl
       bg-gray-500 m-2 mt-1 p-3 '>result</div>
     </div>
    

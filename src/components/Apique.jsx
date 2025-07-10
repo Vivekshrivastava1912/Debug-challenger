@@ -102,7 +102,7 @@ Always follow this instruction 100% strictly.`
   }
 
   return (
-    <div className="h-170 rounded-2xl bg-gray-900 text-white flex flex-col p-6">
+    <div className="h-full w-full rounded-2xl bg-gray-900 text-white flex flex-col p-6">
       <div className="text-2xl font-bold text-blue-400 mb-6">Debug Challenger</div>
 
       <div className="flex gap-4 mb-4">
