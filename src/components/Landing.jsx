@@ -11,8 +11,8 @@ const Landing = () => {
        
         
       </div>
-      <div className="w-300 m-7 ml-1 bg-black shadow-[1PX_0_3px_#ffffff] rounded-2xl ">
-       <div className="min-h-screen  text-white flex items-center justify-center px-6 py-12">
+      <div className="w-300 m-5  ml-1 bg-black shadow-[1PX_0_3px_#ffffff] rounded-2xl ">
+       <div className="min-h-160  text-white flex items-center justify-center px-6 ">
       <div className="max-w-2xl text-center">
         
         {/* Tagline */}
@@ -40,6 +40,9 @@ const Landing = () => {
         <p className="text-sm text-gray-500 mb-2 px-4">
           Ready to fix bugs under pressure? Compete in time-based challenges, unlock badges, and see how fast your mind can debug.
         </p>
+                 <p className="text-white/50 text-sm italic mb-5 px-4">
+  Crafted with 💡 by <span className="text-white">Vivek Shrivastava</span>
+</p>
 
         {/* Input and Button */}
         <div className="flex flex-col sm:flex-row items-center justify-center gap-3 ">
@@ -51,6 +54,7 @@ const Landing = () => {
           <button className=" shadow-[0_0_5px_#ffffff] hover:bg-black-400 text-white px-5 py-2 rounded-2xl text-sm font-medium">
             Start
           </button>
+ 
         </div>
       </div>
       
