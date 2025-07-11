@@ -12,7 +12,7 @@ const Landing = () => {
         
       </div>
       <div className="w-300 m-3 ml-1 bg-black shadow-[1PX_0_5px_#ffffff] rounded-2xl ">
-       <div className="min-h-screen  text-white flex items-center justify-center px-6 py-12">
+       <div className="h-160  text-white flex items-center justify-center px-6 py-8">
       <div className="max-w-2xl text-center">
         
         {/* Tagline */}
@@ -40,6 +40,9 @@ const Landing = () => {
         <p className="text-sm text-gray-500 mb-2 px-4">
           Ready to fix bugs under pressure? Compete in time-based challenges, unlock badges, and see how fast your mind can debug.
         </p>
+        <p className="text-sm text-gray-500 mb-2 px-4">
+  Crafted with ⚙️	by Vivek Shrivastava
+</p>
 
         {/* Input and Button */}
         <div className="flex flex-col sm:flex-row items-center justify-center gap-3 ">

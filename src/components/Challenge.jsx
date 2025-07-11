@@ -1,4 +1,4 @@
-// src/components/Challenge.jsx
+
 
 import React, { useState, useEffect, useRef } from 'react';
 import { useUser, SignedIn, SignedOut, SignInButton } from '@clerk/clerk-react';
