@@ -3,7 +3,7 @@ import MonacoEditor from '@monaco-editor/react';
 
 const Editor = ({ language, code }) => {
   return (
-    <div className="m-1 h-160 rounded-2xl overflow-hidden shadow-lg border bg-gray-700">
+    <div className="m-1 h-160 rounded-2xl overflow-hidden shadow-lg border bg-black shadow-[1PX_0_3px_#ffffff]">
       <MonacoEditor className='m-2'
         height="70%"
         language={language}
@@ -18,10 +18,10 @@ const Editor = ({ language, code }) => {
       />
 
 
-      <div className='h-20 rounded-2xl
-      bg-gray-500 m-2 mt-1 p-5 '> I AM OUTPUT </div>
+      <div className='h-25 rounded-2xl
+      bg-black shadow-[1PX_0_3px_#ffffff] m-2 mt-1 p-5 text-white '> I AM OUTPUT </div>
       <div className='h-18 rounded-2xl
-      bg-gray-500 m-2 mt-1 p-3 '>result</div>
+      bg-black shadow-[1PX_0_3px_#ffffff] m-2 mt-1 p-3 text-white text-2xl'>result</div>
     </div>
    
   );

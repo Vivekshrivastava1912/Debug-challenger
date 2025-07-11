@@ -1,6 +1,8 @@
-import { Editor } from '@monaco-editor/react'
-import axios from 'axios'
-import React from 'react'
+// src/components/Apique.jsx
+
+import { Editor } from '@monaco-editor/react';
+import axios from 'axios';
+import React from 'react';
 
 const Apique = ({
   language,
@@ -11,9 +13,8 @@ const Apique = ({
   setLevel,
   answer,
   setAnswer,
-  setUserCode  // receive setUserCode here
+  setUserCode
 }) => {
-
   const validTopics = {
     array: "Array",
     stack: "Stack",
@@ -35,16 +36,16 @@ const Apique = ({
     "topological sort": "Topological Sort",
     "bit manipulation": "Bit Manipulation",
     hashing: "Hashing"
-  }
+  };
 
   const generateAnswer = async () => {
-    setAnswer("Loading...")
+    setAnswer("Loading...");
 
     const promptText = `You are a strict debugging code generator for a DSA-only system.
 
 Rules to follow STRICTLY:
 
-1. Accept and generate buggy code *ONLY IF* the input is a valid DSA topic or DSA-related question.
+1. Accept and generate buggy code ONLY IF the input is a valid DSA topic or DSA-related question.
    ✅ Valid topics include: arrays, strings, linked list, stack, queue, tree, graph, sorting, searching, recursion, dynamic programming, greedy, backtracking, disjoint set, trie, segment tree, sliding window, topological sort, bit manipulation, heap, hashing, etc.
 
 2. If the input is not clearly a valid DSA topic or question, then respond with exactly:
@@ -71,11 +72,11 @@ Repeat:
 - Non-DSA inputs = only show: Enter correct syntax
 - Valid DSA input = 2-line header (topic + language) + plain buggy code with bug comment only.
 
-Always follow this instruction 100% strictly.`
+Always follow this instruction 100% strictly.`;
 
     try {
       const response = await axios.post(
-        "https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=AIzaSyDMaZHEWdWPQVs2vj49Zlg7ybah5Y9NMVQ",
+        `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=AIzaSyDMaZHEWdWPQVs2vj49Zlg7ybah5Y9NMVQ`,
         {
           contents: [
             {
@@ -87,29 +88,28 @@ Always follow this instruction 100% strictly.`
             }
           ]
         }
-      )
+      );
 
       const generatedText = response.data.candidates[0].content.parts[0].text;
-
       setAnswer(generatedText);
-      setUserCode(generatedText);  // update userCode here too
+      setUserCode(generatedText);
 
     } catch (err) {
       console.error(err);
       setAnswer("Error generating response. Please try again.");
       setUserCode("Error generating response. Please try again.");
     }
-  }
+  };
 
   return (
-    <div className="h-full w-full overflow-hidden rounded-2xl bg-gray-900 text-white flex flex-col p-6">
-      <div className="text-2xl font-bold overflow-hidden text-blue-400 mb-6">Debug Challenger</div>
+    <div className="h-full w-full overflow-hidden rounded-2xl bg-black shadow-[1px_0_3px_#ffffff] text-white flex flex-col p-6">
+      <div className="text-2xl font-bold mb-6">Debug Challenger</div>
 
       <div className="flex gap-4 mb-4">
         <select
           value={topic}
           onChange={(e) => setTopic(e.target.value)}
-          className="text-bold bg-gray-700 rounded-2xl p-2"
+          className="bg-gray-700 rounded-2xl p-2"
         >
           {Object.entries(validTopics).map(([key, label]) => (
             <option key={key} value={key}>{label}</option>
@@ -119,7 +119,7 @@ Always follow this instruction 100% strictly.`
         <select
           value={language}
           onChange={(e) => setLanguage(e.target.value)}
-          className="text-bold bg-gray-700 rounded-2xl p-2"
+          className="bg-gray-700 rounded-2xl p-2"
         >
           <option value="cpp">C++</option>
           <option value="python">Python</option>
@@ -130,7 +130,7 @@ Always follow this instruction 100% strictly.`
         <select
           value={level}
           onChange={(e) => setLevel(e.target.value)}
-          className="text-bold bg-gray-700 rounded-2xl p-2"
+          className="bg-gray-700 rounded-2xl p-2"
         >
           <option value="easy">Easy</option>
           <option value="medium">Medium</option>
@@ -139,31 +139,26 @@ Always follow this instruction 100% strictly.`
 
         <button
           onClick={generateAnswer}
-          className="text-bold bg-gray-700 rounded-2xl p-2"
+          className="bg-gray-700 rounded-2xl p-2"
         >
-         Generate
+          Generate
         </button>
       </div>
 
-      {/* Show answer as text maybe or remove */}
-      {/*  */}
-   <Editor   height="100%"
+      <Editor
+        height="100%"
         language={language}
         theme="vs-dark"
-        
-        value={answer} 
-
-         options={{ readOnly: true, minimap: { enabled: false } }}
+        value={answer}
+        options={{ readOnly: true, minimap: { enabled: false } }}
         onMount={(editor) => {
           const container = editor.getContainerDomNode();
           container.style.borderRadius = '16px';
           container.style.overflow = 'hidden';
         }}
-    />
-
-
+      />
     </div>
-  )
-}
+  );
+};
 
 export default Apique;

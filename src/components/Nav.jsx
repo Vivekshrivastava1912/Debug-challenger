@@ -1,35 +1,35 @@
-import React from 'react'
-import { SignedIn, SignedOut, SignInButton, UserButton } from '@clerk/clerk-react';
-const Nav = () => {
+import { SignedIn, SignedOut, SignInButton, UserButton } from "@clerk/clerk-react";
+import { Link } from "react-router-dom";
+import React from 'react';  
+
+export default function Header() {
   return (
-    <>   <header className="  flex items-center justify-between bg-black/80 text-white backdrop-blur border-b border-white/10 shadow-[1PX_0_3px_#ffffff] rounded-2xl m-2 p-2 ">
-      {/* Logo or Title */}
-      <h1 className="text-2xl font-semibold tracking-wide">
-        <span className="text-gray-900">⚡</span> Debug Challenger
-      </h1>
+    <header className="flex items-center justify-between m-2 p-3 mt-2 bg-black shadow-[1px_0_7px_#ffffff] text-white rounded-2xl">
+      {/* Logo / Brand */}
+      <div className="text-2xl font-semibold flex items-center gap-2">
+        <span className="text-orange-500">⚡</span>
+        <span>Debug Challenger</span>
+      </div>
 
-      {/* Navigation Links */}
-      <nav className="flex items-center gap-8 text-sm font-medium">
-        <a href="/" className="hover:text-gray-400 transition duration-150 text-lg">Home</a>
-        <a href="/challenge" className="hover:text-gray-400 transition duration-150 text-lg">Challenge</a>
-        <a href="/article" className="hover:text-gray-400 transition duration-150 text-lg">Article</a>
+      {/* Navigation */}
+      <nav className="flex items-center gap-6 text-lg font-medium">
+        <Link to="/" className="hover:text--gray-700 transition">Home</Link>
+        <Link to="/challenge" className="hover:text-gray-700 transition">Challenge</Link>
+        <Link to="/article" className="hover:text--gray-700 transition">Article</Link>
 
-      
+        {/* Auth */}
         <SignedOut>
           <SignInButton mode="modal">
-            <button className="bg-black hover:bg-gray-00 text-white font-semibold px-4 py-2 rounded-md transition">
+            <button className="ml-4 bg-blue-600 hover:bg-blue-700 text-white font-semibold px-4 py-2 rounded-md">
               Sign In
             </button>
           </SignInButton>
         </SignedOut>
 
         <SignedIn>
-          <UserButton   afterSignOutUrl="/" />
+          <UserButton afterSignOutUrl="/" />
         </SignedIn>
       </nav>
     </header>
-   </>
-  )
+  );
 }
-
-export default Nav

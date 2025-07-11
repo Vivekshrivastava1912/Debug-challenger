@@ -4,3 +4,17 @@
 body{
  background-color: black;
 }
+/* Hide scrollbar for all elements (Chrome, Edge, Safari) */
+::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar in Firefox */
+html {
+  scrollbar-width: none; /* Firefox */
+}
+
+/* Prevent shifting due to scrollbar disappearance */
+body {
+  overflow-y: scroll;
+}
