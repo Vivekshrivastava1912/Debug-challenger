@@ -13,9 +13,9 @@ export default function Header() {
 
       {/* Navigation */}
       <nav className="flex items-center gap-6 text-lg font-medium">
-        <Link to="/" className="hover:text--gray-700 transition">Home</Link>
+        <Link to="/Landing" className="hover:text-gray-700 transition">Home</Link>
         <Link to="/challenge" className="hover:text-gray-700 transition">Challenge</Link>
-        <Link to="/article" className="hover:text--gray-700 transition">Article</Link>
+        <Link to="/Article" className="hover:text-gray-700 transition">Article</Link>
 
         {/* Auth */}
         <SignedOut>
