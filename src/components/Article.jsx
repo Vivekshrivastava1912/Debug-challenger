@@ -1,7 +1,8 @@
 import React from 'react';
+import Footer from './Footer';
 
 const Article = () => {
-  return (
+  return (<>
     <div className="min-h-screen bg-black  text-white px-4 md:px-5 py-5 font-mono rounded-2xl m-3">
       <div className="bg-black shadow-[1px_0_3px_#ffffff] rounded-2xl px-6 md:px-16 py-12 border border-gray-800">
         <h1 className="text-4xl font-bold mb-12 text-center border-b border-gray-700 pb-4">Behind the Debug Challenger</h1>
@@ -99,6 +100,7 @@ const Article = () => {
         </footer>
       </div>
     </div>
+    <Footer/> </>
   );
 };
 

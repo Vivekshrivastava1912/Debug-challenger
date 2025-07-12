@@ -65,6 +65,9 @@ const Editor = ({ language, code }) => {
 user se input need hoto kud hi input apne hisab se le lena out out put de dena
 Ab neeche wale code ka upar diye gaye rules ke anusaar code ka output batayein:
 
+
+ERROR , syntex error ,or output ke alava kuch bhi mat dena thik hai
+ager code me koi bhi mistak ho to syntex error dena
 ${editedCode}`;
 
     try {

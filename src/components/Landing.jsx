@@ -2,9 +2,10 @@
 
 import Spline from '@splinetool/react-spline'
 import React from 'react'
+import Footer from './Footer'
 
 const Landing = () => {
-  return (
+  return (<>
     <div className="flex overflow-hidden h-screen">
      <div className="w-1/3 m-3 ml-1 bg-black shadow-[1PX_0_5px_#ffffff] rounded-2xl  ">
        <Spline className='h-full rounded-2xl bg'  scene="https://prod.spline.design/LJ4xIH3ZVAwJ7toB/scene.splinecode" />
@@ -60,6 +61,8 @@ const Landing = () => {
     </div>
       </div> 
        </div>
+        <Footer/>
+        </>
   )
 }
 

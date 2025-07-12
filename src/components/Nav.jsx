@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import React from 'react';  
 
 export default function Header() {
-  return (
+  return (<>
     <header className="flex items-center justify-between m-2 p-3 mt-2 bg-black shadow-[1px_0_7px_#ffffff] text-white rounded-2xl">
       {/* Logo / Brand */}
       <div className="text-2xl font-semibold flex items-center gap-2">
@@ -31,5 +31,7 @@ export default function Header() {
         </SignedIn>
       </nav>
     </header>
+
+    </>
   );
 }
