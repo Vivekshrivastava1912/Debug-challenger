@@ -73,11 +73,11 @@ ${buggyCode}`;
     <div className="h-full w-full overflow-hidden rounded-2xl bg-black shadow-[1px_0_3px_#ffffff] text-white flex flex-col p-6">
       <div className="text-2xl font-bold mb-6">Debug Challenger</div>
 
-      <div className="flex gap-4 mb-4">
+      <div className="sm:flex sm:gap-4 sm:mb-4 gap-4   ">
         <select
           value={topic}
           onChange={(e) => setTopic(e.target.value)}
-          className="bg-gray-700 rounded-2xl p-2"
+          className="bg-gray-700 rounded-2xl p-2 m-2"
         >
           {Object.entries(validTopics).map(([key, label]) => (
             <option key={key} value={key}>{label}</option>
@@ -87,7 +87,7 @@ ${buggyCode}`;
         <select
           value={language}
           onChange={(e) => setLanguage(e.target.value)}
-          className="bg-gray-700 rounded-2xl p-2"
+          className="bg-gray-700 rounded-2xl p-2 m-2"
         >
           <option value="cpp">C++</option>
           <option value="python">Python</option>
@@ -98,7 +98,7 @@ ${buggyCode}`;
         <select
           value={level}
           onChange={(e) => setLevel(e.target.value)}
-          className="bg-gray-700 rounded-2xl p-2"
+          className="bg-gray-700 rounded-2xl p-2 m-2"
         >
           <option value="easy">Easy</option>
           <option value="medium">Medium</option>
@@ -107,7 +107,7 @@ ${buggyCode}`;
 
         <button
           onClick={generateAnswer}
-          className="bg-gray-700 rounded-2xl p-2"
+          className="bg-gray-700 rounded-2xl p-2 m-2"
         >
           Generate
         </button>

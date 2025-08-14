@@ -45,7 +45,7 @@ const Challenge = () => {
 
   return (
     <>
-      <SignedOut>
+       <SignedOut>
         <div className="flex flex-col items-center justify-center h-screen bg-black text-white text-lg">
           <p>You must sign in to access the Challenge.</p>
           <SignInButton mode="modal">
@@ -55,9 +55,9 @@ const Challenge = () => {
       </SignedOut>
 
       <SignedIn>
-        <div className="flex bg-black h-screen overflow-hidden">
+        <div className="sm:flex sm:h-182 bg-black overflow-hidden flex-col sm:flex-row p-3  mb-2 gap-2">
           {/* Left Panel - Code Generator */}
-          <div className="w-1/2 p-2 bg-black rounded-2xl overflow-hidden">
+          <div className="sm:w-1/2 sm:h-175 sm:p-1 sm:m-2 bg-black rounded-2xl w-full h-150 p-1 mb-2">
             <Apique
               language={language}
               setLanguage={setLanguage}
@@ -72,13 +72,14 @@ const Challenge = () => {
           </div>
 
           {/* Right Panel - Timer + Editor */}
-          <div className="w-1/2 p-4 m-2 ml-2 bg-black shadow-[1px_0_3px_#ffffff] rounded-2xl overflow-hidden">
+          <div className="sm:w-1/2 sm:h-175 sm:p-1 sm:m-2 bg-black rounded-2xl w-full bg-black shadow-[1px_0_3px_#ffffff] p-1">
             {/* Timer Display */}
             <div className="p-2">
               <div className="flex items-center gap-3">
-                <h1 className="bg-orange-400 text-black text-base font-semibold px-4 py-1 rounded-lg shadow shadow-black">
-                  {`${String(Math.floor(time / 60000)).padStart(2, '0')}:${String(Math.floor((time % 60000) / 1000)).padStart(2, '0')}`} min
-                </h1>
+                   <h1 className="bg-orange-400 text-black text-base font-semibold px-4 py-1 rounded-lg shadow shadow-black">
+  {`${String(Math.floor(time / 60000)).padStart(2, '0')}:${String(Math.floor((time % 60000) / 1000)).padStart(2, '0')}`} min
+</h1>
+
               </div>
             </div>
 

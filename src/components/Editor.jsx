@@ -144,11 +144,11 @@ ${editedCode}`;
         }}
       />
 
-      <div className="h-25 rounded-2xl bg-black shadow-[1px_0_3px_#ffffff] m-2 mt-1 p-5 text-white whitespace-pre-wrap overflow-auto">
+      <div className="h-23 rounded-2xl bg-black shadow-[1px_0_3px_#ffffff] m-2 mt-1 p-5 text-white whitespace-pre-wrap overflow-auto">
         {isLoading ? "⏳ Running..." : output}
       </div>
 
-      <div className="h-18 rounded-2xl bg-black shadow-[1px_0_3px_#ffffff] m-2 mt-1 p-3 text-white text-2xl">
+      <div className="h-18 rounded-2xl bg-black shadow-[1px_0_3px_#ffffff] m-2 mt-1 p-2 text-white sm:text-2xl">
         Result -: {resultMessage}
       </div>
     </div>
