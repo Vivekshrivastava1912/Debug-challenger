@@ -6,21 +6,24 @@ import Footer from './Footer'
 
 const Landing = () => {
   return (<>
-    <div className="flex overflow-hidden h-screen">
-     <div className="w-1/3 m-3 ml-1 bg-black shadow-[1PX_0_5px_#ffffff] rounded-2xl  ">
-       <Spline className='h-full rounded-2xl bg'  scene="https://prod.spline.design/LJ4xIH3ZVAwJ7toB/scene.splinecode" />
+    <div className="flex overflow-hidden sm:h-180 h-260">
+     <div className="lg:w-1/3 sm:h-half m-3 ml-1 bg-black shadow-[1PX_0_5px_#ffffff] rounded-2xl ">
+       <Spline className='sm:h-full rounded-2xl bg'  scene="https://prod.spline.design/LJ4xIH3ZVAwJ7toB/scene.splinecode" />
        
         
       </div>
-      <div className="w-300 m-3 ml-1 bg-black shadow-[1PX_0_5px_#ffffff] rounded-2xl ">
-       <div className="h-160  text-white flex items-center justify-center px-6 py-8">
+      <div className="w-300 sm:h-173  h-253 m-3 ml-1 bg-black shadow-[1PX_0_5px_#ffffff] rounded-2xl ">
+       <div className="sm:h-170 h-250 text-white flex items-center justify-center px-6 py-2">
       <div className="max-w-2xl text-center">
         
         {/* Tagline */}
         <div className="text-sm text-gray-400 mb-3 ">
           ✦ Debug Challenger: Level Up Debugging
         </div>
-
+     <h1 className="text-2xl md:text-4xl font-extrabold leading-tight mb-6 text-white">
+    Sharpen Your Debugging Skills,  
+    <span className="text-orange-400"> One Challenge at a Time</span>
+  </h1>
         {/* Heading */}
         <h1 className="text-2xl md:text-3xl font-mono font-bold leading-snug mb-4">
           The Ultimate Debugging Companion
@@ -37,6 +40,22 @@ const Landing = () => {
           Sharpen your skills with logic puzzles, runtime errors, syntax mistakes, and edge case hunting — all in an engaging, gamified format.
         </p>
 
+
+       <div className="grid gap-6 md:grid-cols-3 text-left mb-10">
+    <div className="bg-gray-800/50 p-5 rounded-xl border border-gray-700">
+      <h3 className="text-orange-300 font-semibold mb-2">Real-World Challenges</h3>
+      <p className="text-gray-400 text-sm">Fix syntax errors, runtime bugs, and tricky edge cases inspired by real development issues.</p>
+    </div>
+    <div className="bg-gray-800/50 p-5 rounded-xl border border-gray-700">
+      <h3 className="text-orange-300 font-semibold mb-2">AI-Powered Hints</h3>
+      <p className="text-gray-400 text-sm">Get just enough guidance to help you think like a pro without giving away the answer.</p>
+    </div>
+    <div className="bg-gray-800/50 p-5 rounded-xl border border-gray-700">
+      <h3 className="text-orange-300 font-semibold mb-2">Gamified Learning</h3>
+      <p className="text-gray-400 text-sm">Earn badges, track your progress, and compete with others in timed bug hunts.</p>
+    </div>
+  </div>
+
         {/* Extra Supporting Line */}
         <p className="text-sm text-gray-500 mb-2 px-4">
           Ready to fix bugs under pressure? Compete in time-based challenges, unlock badges, and see how fast your mind can debug.
@@ -44,18 +63,6 @@ const Landing = () => {
         <p className="text-sm text-gray-500 mb-2 px-4">
   Crafted with ⚙️	by Vivek Shrivastava
 </p>
-
-        {/* Input and Button */}
-        <div className="flex flex-col sm:flex-row items-center justify-center gap-3 ">
-          <input 
-            type="text"
-            placeholder="type a challenge or bug"
-            className="bg-black text-white px-4 py-2 rounded-2xl w-64 text-sm focus:outline-none shadow-[0_0_5px_#ffffff]  "
-          />
-          <button className=" shadow-[0_0_5px_#ffffff] hover:bg-black-400 text-white px-5 py-2 rounded-2xl text-sm font-medium">
-            Start
-          </button>
-        </div>
       </div>
       
     </div>
