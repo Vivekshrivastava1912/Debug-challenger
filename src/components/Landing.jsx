@@ -6,14 +6,13 @@ import Footer from './Footer'
 
 const Landing = () => {
   return (<>
-    <div className="flex overflow-hidden sm:h-180 h-260">
-     <div className="lg:w-1/3 sm:h-half m-3 ml-1 bg-black shadow-[1PX_0_5px_#ffffff] rounded-2xl ">
-       <Spline className='sm:h-full rounded-2xl bg'  scene="https://prod.spline.design/LJ4xIH3ZVAwJ7toB/scene.splinecode" />
-       
+    <div className="flex overflow-hidden sm:h-180 h-270">
+     <div className="lg:w-100 sm:ml-30 sm:h-half sm:ml-9 bg-red-700 shadow-[1PX_0_5px_#ffffff] rounded-2xl w-0 h-0 ">
+       <img src="/robot.jpeg" alt="Robot" />
         
       </div>
-      <div className="w-300 sm:h-173  h-253 m-3 ml-1 bg-black shadow-[1PX_0_5px_#ffffff] rounded-2xl ">
-       <div className="sm:h-170 h-250 text-white flex items-center justify-center px-6 py-2">
+      <div className="w-300 sm:h-173  h-263 m-3 ml-1 bg-black shadow-[1PX_0_5px_#ffffff] rounded-2xl sm:shadow-[1PX_0_5px_] ">
+       <div className="sm:h-170 h-250 text-white flex items-center justify-center px-2 py-2">
       <div className="max-w-2xl text-center">
         
         {/* Tagline */}

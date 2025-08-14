@@ -26,7 +26,7 @@ export default function Header() {
 
   return (
     <>
-      <header className="flex items-center justify-between m-2 p-1 bg-black shadow-[1px_0_7px_#ffffff] text-white rounded-2xl">
+      <header className="flex items-center justify-between m-2 p-1 bg-black shadow-[1px_0_3px_#ffffff] text-white rounded-2xl sm:bg-black shadow-[1px_0_7px_#ffffff]">
         {/* Logo */}
         <div className="text-xl font-semibold flex items-center ">
           <span className="text-blue-500 mb-1 ">⚡</span>
