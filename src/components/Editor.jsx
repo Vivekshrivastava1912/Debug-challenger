@@ -1,9 +1,9 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, use } from 'react';
 import MonacoEditor from '@monaco-editor/react';
 import axios from 'axios';
 
 const Editor = ({ language, code }) => {
-  const [output, setOutput] = useState("Output...");
+  const [output, setOutput] = useState("");
   const [editedCode, setEditedCode] = useState(code);
   const [isLoading, setIsLoading] = useState(false);
   const [resultMessage, setResultMessage] = useState("click on submit");
@@ -145,7 +145,7 @@ ${editedCode}`;
       />
 
       <div className="h-23 rounded-2xl bg-black shadow-[1px_0_3px_#ffffff] m-2 mt-1 p-5 text-white whitespace-pre-wrap overflow-auto">
-        {isLoading ? "⏳ Running..." : output}
+        {isLoading ? "⏳ Running..." : `output:- ${output} `}
       </div>
 
       <div className="h-18 rounded-2xl bg-black shadow-[1px_0_3px_#ffffff] m-2 mt-1 p-2 text-white sm:text-2xl">

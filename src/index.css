@@ -18,3 +18,10 @@ html {
 body {
   overflow-y: scroll;
 }
+::selection{
+
+   color: rgb(229, 125, 20);
+}
+::after{
+  color: aqua;
+}

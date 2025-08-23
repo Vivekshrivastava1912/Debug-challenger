@@ -41,7 +41,7 @@ const Challenge = () => {
     return () => clearInterval(intervalRef.current);
   }, [answer]);
 
-  if (!isLoaded) return <div className="text-white p-4">Loading user info...</div>;
+  if (!isLoaded) return <div className="text-white p-4"> Loading user info...</div>;
 
   return (
     <>

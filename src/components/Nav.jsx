@@ -36,9 +36,10 @@ export default function Header() {
         {/* Desktop Navigation */}
         <nav className="hidden md:flex items-center gap-12 p-2 text-lg font-medium ">
           <Link to="/Landing" className="hover:text-gray-400 transition text-xl">Home</Link>
-          <Link to="/challenge" className="hover:text-gray-400 transition text-xl">Challenge</Link>
-          <Link to="/Article" className="hover:text-gray-400 transition text-xl">Article</Link>
-
+          <Link to="/challenge" className="hover:text-gray-400 transition text-xl">Debug</Link>
+          <Link to="/Quizepage" className="hover:text-gray-400 transition text-xl">Quiz</Link>
+          <Link to="/Aabhi" className="hover:text-gray-400 transition text-xl">pata nahi</Link>
+         <Link to="/Article" className="hover:text-gray-400 transition text-xl">Article</Link>
           <SignedOut>
             <SignInButton mode="modal">
               <button className="px-2 py-1 rounded-md bg-orange-500 shadow-[1px_0_4px_#ffffff] m-2px text-black font-bold text-xl">
@@ -67,8 +68,11 @@ export default function Header() {
           className="absolute top-20 right-3 bg-black text-white rounded-lg p-3 shadow-[1px_0_4px_#ffffff] flex flex-col gap-2 z-50"
         >
           <Link to="/Landing" className="px-2 py-1 rounded-md bg-black shadow-[1px_0_4px_#ffffff] mb-2px text-center" onClick={() => setIsOpen(false)}>Home</Link>
-          <Link to="/challenge" className="px-2 py-1 rounded-md bg-black shadow-[1px_0_4px_#ffffff] mb-2px text-center" onClick={() => setIsOpen(false)}>Challenge</Link>
-          <Link to="/Article" className="px-2 py-1 rounded-md bg-black shadow-[1px_0_4px_#ffffff] mb-2px text-center" onClick={() => setIsOpen(false)}>Article</Link>
+          <Link to="/challenge" className="px-2 py-1 rounded-md bg-black shadow-[1px_0_4px_#ffffff] mb-2px text-center" onClick={() => setIsOpen(false)}>Debug</Link>
+        
+            <Link to="/Aabhi" className="px-2 py-1 rounded-md bg-black shadow-[1px_0_4px_#ffffff] mb-2px text-center" onClick={() => setIsOpen(false)}>Aabhi</Link>
+              <Link to="/Quizepage" className="px-2 py-1 rounded-md bg-black shadow-[1px_0_4px_#ffffff] mb-2px text-center" onClick={() => setIsOpen(false)}>Quiz</Link>
+                <Link to="/Article" className="px-2 py-1 rounded-md bg-black shadow-[1px_0_4px_#ffffff] mb-2px text-center" onClick={() => setIsOpen(false)}>Article</Link>
 
           <SignedOut>
             <SignInButton mode="modal">

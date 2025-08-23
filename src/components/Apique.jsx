@@ -4,7 +4,7 @@ import React, { useState } from 'react';
 
 const Apique = ({ language, setLanguage, topic, setTopic, level, setLevel, answer, setAnswer, setUserCode }) => {
   const [output, setOutput] = useState('');
-
+ 
   const validTopics = {
     array: "Array", stack: "Stack", queue: "Queue", "linked list": "Linked List",
     tree: "Tree", graph: "Graph", dp: "Dynamic Programming", sorting: "Sorting",
@@ -29,7 +29,7 @@ Generate a ${level} level buggy code in ${language} for topic: ${validTopics[top
 Instructions:
 - First line: Topic: ${validTopics[topic]}
 - Second line: Language: ${language}
-- Then give only the buggy code (10–25 lines)
+- Then give only the buggy code (10–25 lines code for easy level ) (25–45 lines code for medium level)(45-80 lines code for hard level)
 - Mark ONLY the buggy lines with: // bug
 - Do NOT explain the bug. Do NOT give description.
 - Do NOT use markdown or formatting. Just plain text.
@@ -49,7 +49,9 @@ Instructions:
       setUserCode(buggyCode);
 
       // Second API Call - get output of fixed code
-      const prompt2 = `Fix the following ${language} code and return only the expected output after running the corrected code. No explanation, no code, just output.
+      const prompt2 = `Fix the following ${language} code and return only the output after running the  code. No explanation, no code, just output.
+
+      output output ki form me do yrr
 
 ${buggyCode}`;
 
@@ -62,10 +64,16 @@ ${buggyCode}`;
 
       const finalOutput = res2.data.candidates[0].content.parts[0].text.trim();
       setOutput(finalOutput);
+
+
+
+
+
     } catch (err) {
       console.error("Gemini API Error:", err);
       setAnswer("Error generating buggy code.");
       setOutput("Error getting output from Gemini.");
+      setResults("Error getting output from Gemini.");
     }
   };
 
@@ -73,7 +81,7 @@ ${buggyCode}`;
     <div className="h-full w-full overflow-hidden rounded-2xl bg-black shadow-[1px_0_3px_#ffffff] text-white flex flex-col p-6">
       <div className="text-2xl font-bold mb-6">Debug Challenger</div>
 
-      <div className="sm:flex sm:gap-4 sm:mb-4 gap-4   ">
+      <div className="lg:flex lg:gap-4 :mb-4 gap-4   ">
         <select
           value={topic}
           onChange={(e) => setTopic(e.target.value)}
@@ -127,7 +135,7 @@ ${buggyCode}`;
         }}
       />
 
-      {/* Output Box */}
+     
       
     </div>
   );
