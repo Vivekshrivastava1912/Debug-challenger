@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import axios from "axios";
-
+import { useUser, SignedIn, SignedOut, SignInButton } from '@clerk/clerk-react';
 const Aabhi = () => {
   const [topic, setTopic] = useState("html");
   const [level, setLevel] = useState("easy");
@@ -131,7 +131,19 @@ level : ${level}
   };
 
   return (
-    <div className="min-h-screen min-w-screen bg-black text-white rounded-lg lg:flex">
+   <> 
+     <SignedOut>
+          <div className="flex flex-col items-center justify-center h-screen bg-black text-white text-lg">
+            <p>You must sign in to access this feature.</p>
+            <SignInButton mode="modal">
+              <button className="mt-4 bg-white text-black px-4 py-2 rounded-md">Sign In</button>
+            </SignInButton>
+          </div>
+        </SignedOut>
+  
+        <SignedIn></SignedIn> 
+   
+   <div className="min-h-screen min-w-screen bg-black text-white rounded-lg lg:flex">
       {/* Left Section */}
       <div className="lg:w-[100%] lg:bg-black rounded-lg  m-2">
         <div className="lg:w-[100%]  rounded-lg ">
@@ -279,7 +291,7 @@ level : ${level}
 
 
       </div>
-    </div>
+    </div></>
   );
 };
 

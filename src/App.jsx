@@ -11,6 +11,8 @@ import Aabhi from './components/Aabhi';
 const App = () => {
   return (
     <>
+
+   
       <Nav />
 
       <Routes>
@@ -20,6 +22,7 @@ const App = () => {
         <Route path="/article" element={<Article />} />
         <Route path="/Quizepage" element={<Quizepage />} />
         <Route path="/Aabhi" element={<Aabhi />} />
+        
       </Routes>
     </>
   );

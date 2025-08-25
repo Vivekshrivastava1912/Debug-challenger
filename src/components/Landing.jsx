@@ -40,20 +40,32 @@ const Landing = () => {
         </p>
 
 
-       <div className="grid gap-6 md:grid-cols-3 text-left mb-10">
-    <div className="bg-gray-800/50 p-5 rounded-xl border border-gray-700">
-      <h3 className="text-orange-300 font-semibold mb-2">Real-World Challenges</h3>
-      <p className="text-gray-400 text-sm">Fix syntax errors, runtime bugs, and tricky edge cases inspired by real development issues.</p>
-    </div>
-    <div className="bg-gray-800/50 p-5 rounded-xl border border-gray-700">
-      <h3 className="text-orange-300 font-semibold mb-2">AI-Powered Hints</h3>
-      <p className="text-gray-400 text-sm">Get just enough guidance to help you think like a pro without giving away the answer.</p>
-    </div>
-    <div className="bg-gray-800/50 p-5 rounded-xl border border-gray-700">
-      <h3 className="text-orange-300 font-semibold mb-2">Gamified Learning</h3>
-      <p className="text-gray-400 text-sm">Earn badges, track your progress, and compete with others in timed bug hunts.</p>
-    </div>
+     <div className="grid gap-6 md:grid-cols-3 text-left mb-10">
+  {/* Debug Challenger */}
+  <div className="bg-gray-800/50 p-5 rounded-xl border border-gray-700 hover:shadow-[0_0_12px_rgba(255,165,0,0.4)] transition-shadow">
+    <h3 className="text-orange-300 font-semibold mb-2">⚡ Debug Challenger</h3>
+    <p className="text-gray-400 text-sm">
+      Solve AI-generated buggy code across topics and fix them in real-time challenges.
+    </p>
   </div>
+
+  {/* Quiz */}
+  <div className="bg-gray-800/50 p-5 rounded-xl border border-gray-700 hover:shadow-[0_0_12px_rgba(255,165,0,0.4)] transition-shadow">
+    <h3 className="text-orange-300 font-semibold mb-2">🧩 DSA Quizzes</h3>
+    <p className="text-gray-400 text-sm">
+      Attempt topic-wise DSA quizzes and instantly check your score and results.
+    </p>
+  </div>
+
+  {/* iRemark */}
+  <div className="bg-gray-800/50 p-5 rounded-xl border border-gray-700 hover:shadow-[0_0_12px_rgba(255,165,0,0.4)] transition-shadow">
+    <h3 className="text-orange-300 font-semibold mb-2">💡 iRemark</h3>
+    <p className="text-gray-400 text-sm">
+      Get interview-style questions with AI feedback on strengths and improvements.
+    </p>
+  </div>
+</div>
+
 
         {/* Extra Supporting Line */}
         <p className="text-sm text-gray-500 mb-2 px-4">
